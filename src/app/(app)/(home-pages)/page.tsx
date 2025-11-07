@@ -6,6 +6,7 @@ import SectionGridFeatureProperty from '@/components/SectionGridFeatureProperty'
 import SectionOurFeatures from '@/components/SectionOurFeatures'
 import SectionSliderNewCategories from '@/components/SectionSliderNewCategories'
 import SectionSubscribe2 from '@/components/SectionSubscribe2'
+import UnidadesCanada from '@/components/UnidadesCanada'
 import { getPropertyTypeCategories, getRealEstateCategories } from '@/data/categories'
 import { getRealEstateListings } from '@/data/listings'
 import heroImage from '@/images/hero-right-4.png'
@@ -129,16 +130,16 @@ async function Page() {
             </div>
           </div>
         </div>
+        <div className="space-y-10">
+          <HeadingWithSub subheading="Conheça nossas unidades">
+            Canadá+ Unidades
+          </HeadingWithSub>
+          <UnidadesCanada />
+        </div>
         <SectionOurFeatures type="type2" rightImg={ourFeatureImage} />
         <SectionGridFeatureProperty listing={listings} />
         <SectionLogoCloud />
         <SectionDowloadApp />
-        <div>
-          <HeadingWithSub subheading="Explore os melhores lugares para morar.">
-            Viva uma nova experiência
-          </HeadingWithSub>
-          <SectionSliderNewCategories categoryCardType="card4" categories={categories.slice(0, 7)} />
-        </div>
         <SectionSubscribe2 />
       </div>
     </main>

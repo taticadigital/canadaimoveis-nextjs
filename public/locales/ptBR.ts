@@ -36,7 +36,7 @@ export const en = {
     Reviews: 'Avaliações',
   },  
   Header: {
-    'List your property': 'Anuncie sua propriedade',
+    'List your property': 'Anuncie seu imovel',
     'Sign up': 'Cadastrar-se',
     AvatarDropDown: {
       'My Account': 'Minha conta',

@@ -16,10 +16,8 @@ const SectionSubscribe2: FC<Props> = ({ className = '' }) => {
   return (
     <div className={`relative flex flex-col lg:flex-row lg:items-center ${className}`}>
       <div className="mb-10 shrink-0 lg:me-10 lg:mb-0 lg:w-2/5">
-        <Heading>Join our newsletter 🎉</Heading>
-        <Subheading className="mt-5">
-          Read and share new perspectives on just about any topic. Everyone&apos;s welcome.
-        </Subheading>
+        <Heading>Canadá+ Melhores imoveis</Heading>
+        <Subheading className="mt-5">Receba novidades na nossa newsletter.</Subheading>
         <ul className="mt-10 space-y-4">
           <li className="flex items-center gap-x-4">
             <Badge color="blue">01</Badge>
