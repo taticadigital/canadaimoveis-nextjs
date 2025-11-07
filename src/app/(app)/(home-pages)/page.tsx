@@ -105,29 +105,40 @@ async function Page() {
   const propertyTypeCategories = await getPropertyTypeCategories()
   const categories = await getRealEstateCategories()
   const listings = await getRealEstateListings()
+  
+  console.log('propertyTypeCategories:', propertyTypeCategories)
+  console.log('categories:', categories)
+  console.log('listings:', listings)
 
   return (
     <main className="relative overflow-hidden">
       <div className="relative container mb-24 flex flex-col gap-y-24 lg:mb-28 lg:gap-y-32">
         <SectionHero />
+        <div className="relative py-20 -mt-16">
+          <BackgroundSection className="bg-neutral-100 dark:bg-black/20" />
+          <div className="container">
+            <HeadingWithSub isCenter subheading="Explore os diferentes tipos de imóveis disponíveis.">
+              Encontre seu imóvel
+            </HeadingWithSub>
+            <div className="mt-10">
+              {propertyTypeCategories && propertyTypeCategories.length > 0 ? (
+                <SectionGridCategoryBox categories={propertyTypeCategories} />
+              ) : (
+                <p className="text-center text-neutral-500">Carregando categorias...</p>
+              )}
+            </div>
+          </div>
+        </div>
         <SectionOurFeatures type="type2" rightImg={ourFeatureImage} />
         <SectionGridFeatureProperty listing={listings} />
-        <div className="relative py-20">
-          <BackgroundSection className="bg-neutral-100 dark:bg-black/20" />
-          <HeadingWithSub isCenter subheading="Explore os diferentes tipos de imóveis disponíveis.">
-            Encontre seu imóvel
-          </HeadingWithSub>
-          <SectionGridCategoryBox categories={propertyTypeCategories} />
-        </div>
         <SectionLogoCloud />
         <SectionDowloadApp />
         <div>
-          <HeadingWithSub subheading="Explore the best places to stay in the world.">
-            Let&apos;s go on an adventure
+          <HeadingWithSub subheading="Explore os melhores lugares para morar.">
+            Viva uma nova experiência
           </HeadingWithSub>
           <SectionSliderNewCategories categoryCardType="card4" categories={categories.slice(0, 7)} />
         </div>
-
         <SectionSubscribe2 />
       </div>
     </main>

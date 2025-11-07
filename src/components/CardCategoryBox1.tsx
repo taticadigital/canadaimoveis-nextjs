@@ -12,6 +12,7 @@ export interface CardCategoryBox1Props {
 
 const CardCategoryBox1: FC<CardCategoryBox1Props> = ({ className = '', category }) => {
   const { count, name, thumbnail, href } = category
+  console.log('Rendering category:', { name, thumbnail, href })
   return (
     <Link href={href} className={`relative flex items-center nc-box-has-hover p-3 sm:p-6 ${className}`}>
       <Badge className="absolute end-2.5 top-2.5" color="zinc">
