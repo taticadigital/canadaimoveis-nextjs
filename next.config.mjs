@@ -28,6 +28,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.sgn3.com.br',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }

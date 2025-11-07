@@ -680,10 +680,197 @@ export async function getFlightCategoryByHandle(handle?: string) {
   return categories.find((category) => category.handle === handle)
 }
 
+// Property Type categories --------
+export async function getPropertyTypeCategories() {
+  return [
+    {
+      id: 'property-type://1',
+      name: 'Apartamento',
+      handle: 'apartamento',
+      href: '/real-estate-categories/apartamento',
+      count: 12500,
+      thumbnail: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Apartamentos modernos e confortáveis',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://2',
+      name: 'Casa',
+      handle: 'casa',
+      href: '/real-estate-categories/casa',
+      count: 18900,
+      thumbnail: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Casas espaçosas e aconchegantes',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://3',
+      name: 'Casa em Condomínio',
+      handle: 'casa-condominio',
+      href: '/real-estate-categories/casa-condominio',
+      count: 8500,
+      thumbnail: 'https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Casas com segurança e lazer',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://4',
+      name: 'Sobrado',
+      handle: 'sobrado',
+      href: '/real-estate-categories/sobrado',
+      count: 6200,
+      thumbnail: 'https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Sobrados com múltiplos andares',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://5',
+      name: 'Kitnet',
+      handle: 'kitnet',
+      href: '/real-estate-categories/kitnet',
+      count: 3400,
+      thumbnail: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Kitnets compactas e funcionais',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://6',
+      name: 'Salão Comercial',
+      handle: 'salao-comercial',
+      href: '/real-estate-categories/salao-comercial',
+      count: 2800,
+      thumbnail: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Salões comerciais para seu negócio',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://7',
+      name: 'Terreno',
+      handle: 'terreno',
+      href: '/real-estate-categories/terreno',
+      count: 4500,
+      thumbnail: 'https://images.pexels.com/photos/221024/pexels-photo-221024.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Terrenos para construção',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://8',
+      name: 'Loja',
+      handle: 'loja',
+      href: '/real-estate-categories/loja',
+      count: 2100,
+      thumbnail: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Lojas para varejo',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://9',
+      name: 'Galpão',
+      handle: 'galpao',
+      href: '/real-estate-categories/galpao',
+      count: 1200,
+      thumbnail: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Galpões para armazenamento',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://10',
+      name: 'Escritório',
+      handle: 'escritorio',
+      href: '/real-estate-categories/escritorio',
+      count: 3800,
+      thumbnail: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Escritórios modernos e profissionais',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://11',
+      name: 'Cobertura',
+      handle: 'cobertura',
+      href: '/real-estate-categories/cobertura',
+      count: 1500,
+      thumbnail: 'https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Coberturas de luxo',
+      region: 'Brasil',
+    },
+    {
+      id: 'property-type://12',
+      name: 'Studio',
+      handle: 'studio',
+      href: '/real-estate-categories/studio',
+      count: 2900,
+      thumbnail: 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=500',
+      coverImage: {
+        src: realEstateCategoryCoverImage.src,
+        width: realEstateCategoryCoverImage.width,
+        height: realEstateCategoryCoverImage.height,
+      },
+      description: 'Studios compactos e modernos',
+      region: 'Brasil',
+    },
+  ]
+}
+
 // types
 export type TStayCategory = Awaited<ReturnType<typeof getStayCategories>>[number]
 export type TExperienceCategory = Awaited<ReturnType<typeof getExperienceCategories>>[number]
 export type TCarCategory = Awaited<ReturnType<typeof getCarCategories>>[number]
 export type TRealEstateCategory = Awaited<ReturnType<typeof getRealEstateCategories>>[number]
 export type TFlightCategory = Awaited<ReturnType<typeof getFlightCategories>>[number]
-export type TCategory = TStayCategory | TExperienceCategory | TCarCategory | TRealEstateCategory | TFlightCategory
+export type TPropertyTypeCategory = Awaited<ReturnType<typeof getPropertyTypeCategories>>[number]
+export type TCategory = TStayCategory | TExperienceCategory | TCarCategory | TRealEstateCategory | TFlightCategory | TPropertyTypeCategory

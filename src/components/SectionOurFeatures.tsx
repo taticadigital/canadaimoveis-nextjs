@@ -1,5 +1,6 @@
 import rightImgPng from '@/images/our-features.png'
 import { Badge } from '@/shared/Badge'
+import { Button } from '@/shared/Button'
 import { Heading } from '@/shared/Heading'
 import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
@@ -17,33 +18,38 @@ interface Props {
     title: string
     description: string
   }[]
+  buttonText?: string
+  buttonHref?: string
 }
 
 const SectionOurFeatures: FC<Props> = ({
   className,
   rightImg = rightImgPng,
   type = 'type1',
-  subHeading = 'Benefits',
-  heading = 'Happening cities',
+  subHeading = 'Sobre nós',
+  heading = 'Canadá+ Empreendimentos',
   listItems = [
     {
-      badge: 'Advertising',
-      title: 'Cost-effective advertising',
-      description: 'With a free listing, you can advertise your rental with no upfront costs',
+      badge: 'Lançamentos',
+      badgeColor: 'blue',
+      title: 'Novos empreendimentos',
+      description: 'Descubra os mais recentes lançamentos imobiliários com as melhores localizações e condições de pagamento',
     },
     {
-      badge: 'Exposure',
+      badge: 'Latitude18',
       badgeColor: 'green',
-      title: 'Reach millions with Chisfis',
-      description: 'Millions of people are searching for unique places to stay around the world',
+      title: 'Latitude18 - Seu novo lar',
+      description: 'Conheça o Latitude18, um empreendimento exclusivo com acabamentos de alto padrão e infraestrutura completa',
     },
     {
-      badge: 'Secure',
+      badge: 'Experiência',
       badgeColor: 'red',
-      title: 'Secure and simple',
-      description: 'A Holiday Lettings listing gives you a secure and easy way to take bookings and payments online',
+      title: '45 anos de tradição',
+      description: 'Há 45 anos aproximando você do seu próximo lar com confiança, qualidade e compromisso',
     },
   ],
+  buttonText = 'Saiba mais',
+  buttonHref = '#',
 }) => {
   return (
     <div
@@ -69,6 +75,14 @@ const SectionOurFeatures: FC<Props> = ({
             </li>
           ))}
         </ul>
+
+        {buttonText && (
+          <div className="mt-10">
+            <Button href={buttonHref} color="primary">
+              {buttonText}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   )

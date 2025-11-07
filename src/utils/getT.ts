@@ -1,4 +1,4 @@
-import { en } from '../../public/locales/en'
+import { en } from '../../public/locales/ptBR'
 
 const T = en
 

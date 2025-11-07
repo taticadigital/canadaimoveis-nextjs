@@ -31,9 +31,9 @@ const SectionDowloadApp = () => {
       </BackgroundSection>
 
       <div className="relative inline-block">
-        <h2 className="text-5xl font-bold text-neutral-800 md:text-6xl xl:text-7xl">Mobile Apps</h2>
+        <h2 className="text-5xl font-bold text-neutral-800 md:text-6xl xl:text-7xl"> Canada+ App</h2>
         <span className="mt-7 block max-w-md text-neutral-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus porttitor nisl, sit amet finibus libero.
+        Tudo da sua locação, mais perto de você. Baixe nosso app nas Stores
         </span>
         <div className="mt-10 flex gap-x-2 sm:mt-14 sm:gap-x-4">
           <Link href="#" target="_blank" rel="noopener noreferrer" className="flex max-w-40">

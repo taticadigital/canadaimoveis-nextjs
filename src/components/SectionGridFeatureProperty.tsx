@@ -17,9 +17,9 @@ interface Props {
 
 const SectionGridFeatureProperty: FC<Props> = ({
   listing,
-  heading = 'Find Your Smart Home',
-  subHeading = 'Explore the best properties in the world.',
-  tabs = ['New York', 'Tokyo', 'Paris', 'London'],
+  heading = 'Encontre seu imóvel',
+  subHeading = 'Encontre as melhores moradias + perto de você',
+  tabs = ['Centro', 'Vila são Francisco', 'Vila Ayrosa', 'Campesina','Vila Yara','Jaguaribe','Jaguaribe','São Bento','City Bussocaba'],
   className,
 }) => {
   return (

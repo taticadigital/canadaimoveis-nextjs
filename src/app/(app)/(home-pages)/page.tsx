@@ -1,104 +1,134 @@
 import BackgroundSection from '@/components/BackgroundSection'
-import BgGlassmorphism from '@/components/BgGlassmorphism'
-import HeroSectionWithSearchForm1 from '@/components/hero-sections/HeroSectionWithSearchForm1'
-import HeroSearchForm from '@/components/HeroSearchForm/HeroSearchForm'
-import SectionBecomeAnAuthor from '@/components/SectionBecomeAnAuthor'
-import SectionClientSay from '@/components/SectionClientSay'
-import SectionGridAuthorBox from '@/components/SectionGridAuthorBox'
+import { RealEstateHeroSearchForm } from '@/components/HeroSearchForm/RealEstateHeroSearchForm'
+import SectionDowloadApp from '@/components/SectionDowloadApp'
 import SectionGridCategoryBox from '@/components/SectionGridCategoryBox'
-import SectionGridFeaturePlaces from '@/components/SectionGridFeaturePlaces'
-import SectionHowItWork from '@/components/SectionHowItWork'
+import SectionGridFeatureProperty from '@/components/SectionGridFeatureProperty'
 import SectionOurFeatures from '@/components/SectionOurFeatures'
 import SectionSliderNewCategories from '@/components/SectionSliderNewCategories'
 import SectionSubscribe2 from '@/components/SectionSubscribe2'
-import SectionVideos from '@/components/SectionVideos'
-import { getAuthors } from '@/data/authors'
-import { getStayCategories } from '@/data/categories'
-import { getStayListings } from '@/data/listings'
-import heroImage from '@/images/hero-right.png'
-import ButtonPrimary from '@/shared/ButtonPrimary'
-import { Divider } from '@/shared/divider'
+import { getPropertyTypeCategories, getRealEstateCategories } from '@/data/categories'
+import { getRealEstateListings } from '@/data/listings'
+import heroImage from '@/images/hero-right-4.png'
+import logo1Dark from '@/images/logos/dark/1.png'
+import logo2Dark from '@/images/logos/dark/2.png'
+import logo3Dark from '@/images/logos/dark/3.png'
+import logo4Dark from '@/images/logos/dark/4.png'
+import logo5Dark from '@/images/logos/dark/5.png'
+import logo1 from '@/images/logos/nomal/1.png'
+import logo2 from '@/images/logos/nomal/2.png'
+import logo3 from '@/images/logos/nomal/3.png'
+import logo4 from '@/images/logos/nomal/4.png'
+import logo5 from '@/images/logos/nomal/5.png'
+import ourFeatureImage from '@/images/our-features-2.png'
 import HeadingWithSub from '@/shared/Heading'
 import { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Home page of the Stay application',
+  description: 'Booking online & rental online Next.js Template',
+}
+
+const SectionHero = () => {
+  return (
+    <div className="relative">
+      <div className="absolute inset-y-0 end-0 w-full grow lg:w-3/4">
+        <Image
+          fill
+          className="object-cover"
+          src={heroImage}
+          alt="hero"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+        />
+      </div>
+      <div className="relative py-24 lg:py-20">
+        <div className="relative inline-flex">
+          <div className="absolute inset-y-0 end-20 w-screen bg-primary-500 md:end-40"></div>
+          <div className="relative max-w-2xl py-10 text-white sm:py-20 xl:py-24">
+            <h2 className="text-x2/[1.1] font-semibold text-pretty md:text-6xl/[1.1] xl:text-7xl/[1.1]">
+            Há 45 anos aproximando <br />
+            você do seu próximo lar
+            </h2>
+          </div>
+        </div>
+        <div className="hidden w-full lg:mt-20 lg:block">
+          <RealEstateHeroSearchForm formStyle="default" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const SectionLogoCloud = () => {
+  const data = [
+    {
+      id: 1,
+      src: logo1,
+      srcDark: logo1Dark,
+    },
+    {
+      id: 2,
+      src: logo2,
+      srcDark: logo2Dark,
+    },
+    {
+      id: 3,
+      src: logo3,
+      srcDark: logo3Dark,
+    },
+    {
+      id: 4,
+      src: logo4,
+      srcDark: logo4Dark,
+    },
+    {
+      id: 5,
+      src: logo5,
+      srcDark: logo5Dark,
+    },
+  ]
+
+  return (
+    <div className="grid grid-cols-3 gap-5 sm:gap-16 lg:grid-cols-5">
+      {data.map((item) => (
+        <div key={item.id} className="flex items-end justify-center">
+          <Image className="block dark:hidden" src={item.src} alt={`logo-${item.id}`} />
+          <Image className="hidden dark:block" src={item.srcDark} alt={`logo-${item.id}`} />
+        </div>
+      ))}
+    </div>
+  )
 }
 
 async function Page() {
-  const categories = await getStayCategories()
-  const stayListings = await getStayListings()
-  const authors = await getAuthors()
+  const propertyTypeCategories = await getPropertyTypeCategories()
+  const categories = await getRealEstateCategories()
+  const listings = await getRealEstateListings()
 
   return (
     <main className="relative overflow-hidden">
-      <BgGlassmorphism />
       <div className="relative container mb-24 flex flex-col gap-y-24 lg:mb-28 lg:gap-y-32">
-        <HeroSectionWithSearchForm1
-          heading="Hotel, car, experiences"
-          image={heroImage}
-          imageAlt="hero"
-          searchForm={<HeroSearchForm initTab="Stays" />}
-          description={
-            <>
-              <p className="max-w-xl text-base text-neutral-500 sm:text-xl dark:text-neutral-400">
-                With us, your trip is filled with amazing experiences.
-              </p>
-              <ButtonPrimary href={'/stay-categories/all'} className="sm:text-base/normal">
-                Start your search
-              </ButtonPrimary>
-            </>
-          }
-        />
-
+        <SectionHero />
+        <SectionOurFeatures type="type2" rightImg={ourFeatureImage} />
+        <SectionGridFeatureProperty listing={listings} />
+        <div className="relative py-20">
+          <BackgroundSection className="bg-neutral-100 dark:bg-black/20" />
+          <HeadingWithSub isCenter subheading="Explore os diferentes tipos de imóveis disponíveis.">
+            Encontre seu imóvel
+          </HeadingWithSub>
+          <SectionGridCategoryBox categories={propertyTypeCategories} />
+        </div>
+        <SectionLogoCloud />
+        <SectionDowloadApp />
         <div>
           <HeadingWithSub subheading="Explore the best places to stay in the world.">
             Let&apos;s go on an adventure
           </HeadingWithSub>
-          <SectionSliderNewCategories categoryCardType="card3" categories={categories.slice(0, 7)} />
+          <SectionSliderNewCategories categoryCardType="card4" categories={categories.slice(0, 7)} />
         </div>
 
-        <SectionOurFeatures className="py-14" />
-        <SectionGridFeaturePlaces stayListings={stayListings} cardType="card2" />
-        <Divider />
-        <SectionHowItWork />
-        <div className="relative py-20">
-          <BackgroundSection />
-          <HeadingWithSub isCenter subheading="Keep calm & travel on">
-            Become a host
-          </HeadingWithSub>
-          <SectionGridAuthorBox authors={authors} />
-        </div>
         <SectionSubscribe2 />
-        <Divider />
-
-        <div>
-          <HeadingWithSub isCenter subheading={'Great places near where you live'}>
-            Explore nearby
-          </HeadingWithSub>
-          <SectionGridCategoryBox categories={categories.slice(0, 8)} />
-        </div>
-
-        <div className="relative py-16">
-          <BackgroundSection />
-          <SectionBecomeAnAuthor />
-        </div>
-
-        <div>
-          <HeadingWithSub subheading="Explore houses based on 10 types of stays">
-            Explore by types of stays.
-          </HeadingWithSub>
-          <SectionSliderNewCategories
-            itemClassName="w-[17rem] lg:w-1/3 xl:w-1/4"
-            categories={categories.slice(7, 16)}
-            categoryCardType="card5"
-          />
-        </div>
-        <SectionVideos />
-        <div className="relative py-16">
-          <SectionClientSay />
-        </div>
       </div>
     </main>
   )

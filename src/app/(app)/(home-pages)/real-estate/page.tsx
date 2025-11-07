@@ -48,8 +48,7 @@ const SectionHero = () => {
           <div className="absolute inset-y-0 end-20 w-screen bg-primary-500 md:end-40"></div>
           <div className="relative max-w-2xl py-10 text-white sm:py-20 xl:py-24">
             <h2 className="text-4xl/[1.1] font-semibold text-pretty md:text-6xl/[1.1] xl:text-7xl/[1.1]">
-              Discover Your <br />
-              Perfect Property
+              Há 47 anos perto de quem sonha com o lar perfeito.
             </h2>
           </div>
         </div>
