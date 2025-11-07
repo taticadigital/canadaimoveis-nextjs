@@ -3,41 +3,29 @@
 import T from '@/utils/getT'
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
-import { Airplane02Icon, Building03Icon, Car03Icon, HotAirBalloonIcon, House04Icon } from '@hugeicons/core-free-icons'
+import { Building03Icon, HotAirBalloonIcon, House04Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const solutions = [
   {
-    name: T['Header']['DropdownTravelers']['Stays'],
-    description: T['Header']['DropdownTravelers']['stayDescription'],
-    href: '/',
+    name: 'Para alugar',
+    description: 'Encontre imóveis disponíveis para aluguel',
+    href: '/real-estate-categories/aluguel',
     icon: House04Icon,
   },
   {
-    name: T['Header']['DropdownTravelers']['Real Estate'],
-    description: T['Header']['DropdownTravelers']['estateDescription'],
-    href: '/real-estate',
+    name: 'Para comprar',
+    description: 'Encontre imóveis à venda',
+    href: '/real-estate-categories/venda',
     icon: Building03Icon,
   },
   {
-    name: T['Header']['DropdownTravelers']['Cars'],
-    description: T['Header']['DropdownTravelers']['carDescription'],
-    href: '/car',
-    icon: Car03Icon,
-  },
-  {
-    name: T['Header']['DropdownTravelers']['Experiences'],
-    description: T['Header']['DropdownTravelers']['experienceDescription'],
-    href: '/experience',
+    name: 'Lançamentos',
+    description: 'Confira os últimos lançamentos imobiliários',
+    href: '/real-estate-categories/lancamentos',
     icon: HotAirBalloonIcon,
-  },
-  {
-    name: T['Header']['DropdownTravelers']['Flights'],
-    description: T['Header']['DropdownTravelers']['Flight description'],
-    href: '/flight-categories/all',
-    icon: Airplane02Icon,
   },
 ]
 
@@ -47,7 +35,7 @@ export default function DropdownTravelers() {
   return (
     <Popover className="group">
       <PopoverButton className="-m-2.5 flex items-center p-2.5 text-sm font-medium text-neutral-700 group-hover:text-neutral-950 focus:outline-hidden dark:text-neutral-300 dark:group-hover:text-neutral-100">
-        Travelers
+        Imóveis
         <ChevronDownIcon className="ms-1 size-4 group-data-open:rotate-180" aria-hidden="true" />
       </PopoverButton>
       <PopoverPanel

@@ -50,7 +50,7 @@ export const en = {
       Notifications: 'Notificações',
     },
     DropdownTravelers: {
-      Travelers: 'Viajantes',
+      Travelers: 'Imóveis',
       Stays: 'Hospedagens',
       'Real Estate': 'Imóveis',
       Cars: 'Carros',

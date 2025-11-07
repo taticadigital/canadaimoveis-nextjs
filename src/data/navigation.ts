@@ -85,19 +85,24 @@ export async function getNavigation(): Promise<TNavigationItem[]> {
     },
     {
       id: '6',
-      href: '/',
-      name: 'Travelers',
+      href: '/real-estate-categories/all',
+      name: 'Imóveis',
       type: 'dropdown',
       children: [
         {
           id: '1',
-          href: '/',
-          name: 'Stays',
+          href: '/real-estate-categories/all',
+          name: 'Para Alugar',
         },
         {
           id: '2',
-          href: '/real-estate',
-          name: 'Real Estate',
+          href: '/real-estate-categories/all',
+          name: 'Para Comprar',
+        },
+        {
+          id: '3',
+          href: '/real-estate-categories/all',
+          name: 'Lançamentos',
         },
         {
           id: '3',
