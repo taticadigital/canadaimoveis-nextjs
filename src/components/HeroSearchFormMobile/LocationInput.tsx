@@ -84,12 +84,12 @@ const LocationInput: FC<Props> = ({
           ? // if input value is not empty, show suggestions based on input
             renderSearchValues({
               heading: T['HeroSearchForm']['Locations'],
-              items: ['Afghanistan', 'Albania', 'Algeria', 'American Samao', 'Andorra'],
+              items: ['Centro, Osasco', 'Vila Yara, Osasco', 'Quitaúna, Osasco', 'Presidente Altino, Osasco', 'Bela Vista, Osasco', 'Rochdale, Osasco', 'Piratininga, Osasco'],
             })
           : // if input value is empty, show popular destinations suggestions
             renderSearchValues({
               heading: T['HeroSearchForm']['Popular destinations'],
-              items: ['Australia', 'Canada', 'Germany', 'United Kingdom', 'United Arab Emirates'],
+              items: ['Centro, Osasco', 'Vila Yara, Osasco', 'Quitaúna, Osasco', 'Presidente Altino, Osasco', 'Bela Vista, Osasco'],
             })}
       </div>
     </div>

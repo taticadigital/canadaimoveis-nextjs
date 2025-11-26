@@ -1,9 +1,10 @@
 import { TCategory } from '@/data/categories'
 import { TNavigationItem } from '@/data/navigation'
 import { Link } from '@/shared/link'
+import { Button } from '@/shared/Button'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
-import CardCategory7 from '../CardCategory7'
+import Image from 'next/image'
 
 export default function MegaMenuPopover({
   megamenu,
@@ -15,6 +16,12 @@ export default function MegaMenuPopover({
   if (megamenu.type !== 'mega-menu') {
     return null
   }
+
+  const promoImageSrc =
+    'https://www.canadaimoveis.com.br/assets/images/banner-principal-canada.png'
+  const promoTitle = 'Canadá Imóveis'
+  const promoSubtitle = '+ 3.000 imóveis a sua disposição'
+  const promoHref = featuredCategory?.href ?? '/real-estate-categories/all'
 
   const renderNavlink = (item: TNavigationItem) => {
     return (
@@ -53,7 +60,23 @@ export default function MegaMenuPopover({
                   ))}
                 </div>
                 <div className="w-2/5 xl:w-5/14">
-                  <CardCategory7 category={featuredCategory} />
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+                    <Image
+                      src={promoImageSrc}
+                      alt={promoTitle}
+                      fill
+                      sizes="(min-width: 1280px) 400px, 300px"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    <div className="absolute inset-0 flex flex-col justify-end gap-3 p-6 text-white">
+                      <h3 className="text-2xl font-semibold">{promoTitle}</h3>
+                      <p className="text-sm text-white/90">{promoSubtitle}</p>
+                      <Button color="primary" href={promoHref}>
+                        Pesquisar
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

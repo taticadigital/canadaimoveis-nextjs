@@ -49,15 +49,15 @@ const PropertyCard: FC<Props> = ({ className = '', data }) => {
       <div className={clsx('mt-2 flex flex-col gap-y-2 p-3')}>
         <div className="flex flex-col gap-y-2">
           <div className="flex flex-wrap gap-1 text-sm text-neutral-500 dark:text-neutral-400">
-            <span>{bedrooms} beds</span>
+            <span>{bedrooms} quartos</span>
             <span>·</span>
-            <span>{bathrooms} baths</span>
+            <span>{bathrooms} banheiros</span>
             <span>·</span>
-            <span>{acreage} Sq. Fit</span>
+            <span>{acreage} m²</span>
           </div>
 
           <div className="flex items-center gap-x-2">
-            {isAds && <Badge color="green">ADS</Badge>}
+            {isAds && <Badge color="green">Anúncio</Badge>}
             <h2 className={`text-base font-semibold text-neutral-900 capitalize dark:text-white`}>
               <span className="line-clamp-1">{title}</span>
             </h2>

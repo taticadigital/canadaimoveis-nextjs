@@ -58,7 +58,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({ className = '', data }) => {
           <span className="hidden sm:inline-block">
             <BedSingle01Icon className="h-4 w-4" />
           </span>
-          <span className="text-xs text-neutral-500 dark:text-neutral-400">{bedrooms} beds</span>
+          <span className="text-xs text-neutral-500 dark:text-neutral-400">{bedrooms} quartos</span>
         </div>
 
         {/* ---- */}
@@ -66,7 +66,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({ className = '', data }) => {
           <span className="hidden sm:inline-block">
             <Bathtub01Icon className="h-4 w-4" />
           </span>
-          <span className="text-xs text-neutral-500 dark:text-neutral-400">{bathrooms} baths</span>
+          <span className="text-xs text-neutral-500 dark:text-neutral-400">{bathrooms} banheiros</span>
         </div>
 
         {/* ---- */}
@@ -74,7 +74,7 @@ const PropertyCardH: FC<PropertyCardHProps> = ({ className = '', data }) => {
           <span className="hidden sm:inline-block">
             <CropIcon className="h-4 w-4" />
           </span>
-          <span className="text-xs text-neutral-500 dark:text-neutral-400">{acreage} Sq. Fit</span>
+          <span className="text-xs text-neutral-500 dark:text-neutral-400">{acreage} m²</span>
         </div>
       </div>
     )
@@ -88,18 +88,18 @@ const PropertyCardH: FC<PropertyCardHProps> = ({ className = '', data }) => {
             <Badge>
               <div className="flex items-center">
                 <Share07Icon className="h-3 w-3" />
-                <span className="ms-1">4 Network</span>
+                <span className="ms-1">4 Anúncios</span>
               </div>
             </Badge>
             <Badge color="yellow">
               <div className="flex items-center">
                 <UserIcon className="h-3 w-3" />
-                <span className="ms-1">Family</span>
+                <span className="ms-1">Família</span>
               </div>
             </Badge>
           </div>
           <div className="flex items-center gap-x-2">
-            {isAds && <Badge color="green">Ads</Badge>}
+            {isAds && <Badge color="green">Anúncio</Badge>}
             <h2 className="text-lg font-medium capitalize">
               <span className="line-clamp-2">{title}</span>
             </h2>

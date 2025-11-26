@@ -12,14 +12,15 @@ import { House01Icon, MapPinpoint02Icon, MapsLocation01Icon } from '@hugeicons/c
 import { HugeiconsIcon } from '@hugeicons/react'
 import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
+import heroImage from '@/images/hero-right-4.png'
 
 export async function generateMetadata({ params }: { params: Promise<{ handle?: string[] }> }): Promise<Metadata> {
   const { handle } = await params
   const category = await getRealEstateCategoryByHandle(handle?.[0])
   if (!category) {
     return {
-      title: 'Collection not found',
-      description: 'The collection you are looking for does not exist.',
+      title: 'Categoria não encontrada',
+      description: 'A categoria que você está procurando não existe.',
     }
   }
   const { name, description } = category
@@ -43,7 +44,11 @@ const Page = async ({ params }: { params: Promise<{ handle?: string[] }> }) => {
       <div className="container">
         <HeroSectionWithSearchForm1
           heading={category.name}
-          image={category.coverImage}
+          image={{
+            src: heroImage.src,
+            width: heroImage.width,
+            height: heroImage.height,
+          }}
           imageAlt={category.name}
           searchForm={<RealEstateHeroSearchForm formStyle="default" />}
           description={
@@ -52,7 +57,7 @@ const Page = async ({ params }: { params: Promise<{ handle?: string[] }> }) => {
               <span className="ms-2.5">{category.region} </span>
               <span className="mx-5"></span>
               <HugeiconsIcon icon={House01Icon} size={20} color="currentColor" strokeWidth={1.5} />
-              <span className="ms-2.5">{convertNumbThousand(category.count)} properties</span>
+              <span className="ms-2.5">{convertNumbThousand(category.count)} imóveis</span>
             </div>
           }
         />
@@ -63,11 +68,11 @@ const Page = async ({ params }: { params: Promise<{ handle?: string[] }> }) => {
         {/* start heading */}
         <div className="flex flex-wrap items-end justify-between gap-x-2.5 gap-y-5">
           <h2 id="heading" className="scroll-mt-20 text-lg font-semibold text-pretty sm:text-xl">
-            Over {convertNumbThousand(category.count)} properties
-            {category.handle !== 'all' ? ` in ${category.name}` : null}
+            Total - {convertNumbThousand(category.count)} imóveis
+            {category.handle !== 'all' ? ` em ${category.name}` : null}
           </h2>
           <Button color="white" className="ms-auto" href={'/real-estate-categories-map/' + category.handle}>
-            <span className="me-1">Show map</span>
+            <span className="me-1">Ver no mapa</span>
             <HugeiconsIcon icon={MapsLocation01Icon} size={20} color="currentColor" strokeWidth={1.5} />
           </Button>
         </div>

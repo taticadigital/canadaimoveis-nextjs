@@ -28,51 +28,71 @@ type Suggest = {
 const demoInitSuggests: Suggest[] = [
   {
     id: '1',
-    name: 'Bangkok, Thailand',
-    icon: HutIcon,
+    name: 'Centro, Osasco',
+    icon: Location01Icon,
   },
   {
     id: '2',
-    name: 'Ueno, Taito, Tokyo',
-    icon: EiffelTowerIcon,
+    name: 'Vila Yara, Osasco',
+    icon: Location01Icon,
   },
   {
     id: '3',
-    name: 'Ikebukuro, Toshima, Tokyo',
-    icon: TwinTowerIcon,
+    name: 'Quitaúna, Osasco',
+    icon: Location01Icon,
   },
   {
     id: '4',
-    name: 'San Diego, CA',
-    icon: BeachIcon,
+    name: 'Presidente Altino, Osasco',
+    icon: Location01Icon,
   },
   {
     id: '5',
-    name: 'Humboldt Park, Chicago, IL',
-    icon: LakeIcon,
+    name: 'Bela Vista, Osasco',
+    icon: Location01Icon,
   },
 ]
 
 const demoSearchingSuggests: Suggest[] = [
   {
     id: '1',
-    name: 'San Diego, CA',
+    name: 'Centro, Osasco',
   },
   {
     id: '2',
-    name: 'Humboldt Park, Chicago, IL',
+    name: 'Vila Yara, Osasco',
   },
   {
     id: '3',
-    name: 'Bangor, Northern Ireland',
+    name: 'Quitaúna, Osasco',
   },
   {
     id: '4',
-    name: 'New York, NY, United States',
+    name: 'Presidente Altino, Osasco',
   },
   {
     id: '5',
-    name: 'Los Angeles, CA, United States',
+    name: 'Bela Vista, Osasco',
+  },
+  {
+    id: '6',
+    name: 'Rochdale, Osasco',
+  },
+  {
+    id: '7',
+    name: 'Piratininga, Osasco',
+  },
+  {
+    id: '8',
+    name: 'Km 18, Osasco',
+  },
+  {
+    id: '9',
+    name: 'Cidade das Flores, Osasco',
+  },
+  {
+    id: '10',
+    name: 'Jardim das Flores, Osasco',
   },
 ]
 

@@ -21,11 +21,11 @@ const SectionSubscribe2: FC<Props> = ({ className = '' }) => {
         <ul className="mt-10 space-y-4">
           <li className="flex items-center gap-x-4">
             <Badge color="blue">01</Badge>
-            <span className="font-medium text-neutral-700 dark:text-neutral-300">Get more discount</span>
+            <span className="font-medium text-neutral-700 dark:text-neutral-300">Receba ofertas exclusivas</span>
           </li>
           <li className="flex items-center gap-x-4">
             <Badge color="red">02</Badge>
-            <span className="font-medium text-neutral-700 dark:text-neutral-300">Get premium magazines</span>
+            <span className="font-medium text-neutral-700 dark:text-neutral-300">Fique por dentro dos lançamentos</span>
           </li>
         </ul>
         <form className="relative mt-10 max-w-sm" action={'#'} method="POST">

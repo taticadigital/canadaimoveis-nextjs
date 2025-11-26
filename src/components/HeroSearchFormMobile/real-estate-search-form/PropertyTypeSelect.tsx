@@ -7,24 +7,44 @@ import { FC, useState } from 'react'
 
 const defaultPropertyTypes: PropertyType[] = [
   {
-    name: 'Duplex House',
-    value: 'duplex_house',
-    description: 'Have a place to yourself',
+    name: 'Casa',
+    value: 'casa',
+    description: 'Casa residencial',
   },
   {
-    name: 'Ferme House',
-    value: 'ferme_house',
-    description: 'Have your own room and share some common spaces',
+    name: 'Apartamento',
+    value: 'apartamento',
+    description: 'Apartamento em edifício',
   },
   {
-    name: 'Chalet House',
-    value: 'chalet_house',
-    description: 'Have a private or shared room in a boutique hotel, hostel.',
+    name: 'Casa de Condomínio',
+    value: 'casa_condominio',
+    description: 'Casa em condomínio fechado',
   },
   {
-    name: 'Maison House',
-    value: 'maison_house',
-    description: 'Stay in a shared space, like a common room',
+    name: 'Sobrado',
+    value: 'sobrado',
+    description: 'Casa de dois ou mais pavimentos',
+  },
+  {
+    name: 'Kitnet',
+    value: 'kitnet',
+    description: 'Apartamento compacto',
+  },
+  {
+    name: 'Cobertura',
+    value: 'cobertura',
+    description: 'Apartamento no último andar',
+  },
+  {
+    name: 'Terreno',
+    value: 'terreno',
+    description: 'Terreno para construção',
+  },
+  {
+    name: 'Studio',
+    value: 'studio',
+    description: 'Apartamento tipo studio',
   },
 ]
 

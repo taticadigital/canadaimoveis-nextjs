@@ -1,6 +1,5 @@
 'use client'
 
-import avatarImage from '@/images/avatars/Image-1.png'
 import Avatar from '@/shared/Avatar'
 import { Divider } from '@/shared/divider'
 import { Link } from '@/shared/link'
@@ -20,12 +19,15 @@ interface Props {
   className?: string
 }
 
+const avatarSrc =
+  'https://media-gig4-2.cdn.whatsapp.net/v/t61.24694-24/338723300_1416982865784126_6675642598634046648_n.jpg?ccb=11-4&oh=01_Q5Aa3AFmA2mM54zNXRiAkWcp1kPQRcOxKSxjwmFn94NMcpjizQ&oe=69336E94&_nc_sid=5e03e0&_nc_cat=111'
+
 export default function AvatarDropdown({ className }: Props) {
   return (
     <div className={className}>
       <Popover>
         <PopoverButton className="-m-1.5 flex cursor-pointer items-center justify-center rounded-full p-1.5 hover:bg-neutral-100 focus-visible:outline-hidden dark:hover:bg-neutral-800">
-          <Avatar src={avatarImage.src} className="size-8" />
+          <Avatar src={avatarSrc} className="size-8" />
         </PopoverButton>
 
         <PopoverPanel
@@ -38,7 +40,7 @@ export default function AvatarDropdown({ className }: Props) {
         >
           <div className="relative grid grid-cols-1 gap-6 bg-white px-6 py-7 dark:bg-neutral-800">
             <div className="flex items-center space-x-3">
-              <Avatar src={avatarImage.src} className="size-12" />
+              <Avatar src={avatarSrc} className="size-12" />
 
               <div className="grow">
                 <h4 className="font-semibold">Eden Smith</h4>

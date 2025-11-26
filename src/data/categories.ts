@@ -475,10 +475,10 @@ export async function getRealEstateCategoryByHandle(handle?: string) {
   if (!handle || handle === 'all') {
     return {
       id: 'real-estate://all',
-      name: 'Real-estates',
+      name: 'Imóveis em Osasco',
       handle: 'all',
       href: '/real-estate-categories/all',
-      count: 20000,
+      count: 3000,
       thumbnail:
         'https://images.pexels.com/photos/64271/queen-of-liberty-statue-of-liberty-new-york-liberty-statue-64271.jpeg',
       coverImage: {
@@ -486,8 +486,8 @@ export async function getRealEstateCategoryByHandle(handle?: string) {
         width: realEstateCategoryCoverImage.width,
         height: realEstateCategoryCoverImage.height,
       },
-      region: 'Worldwide',
-      description: 'Explore all real estates around the world',
+      region: 'Osasco, SP',
+      description: 'Encontre o imóvel ideal em Osasco. Casas, apartamentos e mais opções para você',
     }
   }
   const categories = await getRealEstateCategories()

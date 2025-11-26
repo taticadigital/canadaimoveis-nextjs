@@ -42,9 +42,9 @@ export const PriceRangeInputField: FC<Props> = ({
   panelClassName,
   clearDataButtonClassName,
   min = 0,
-  max = 1000000,
+  max = 5000000,
 }) => {
-  const [rangePrices, setRangePrices] = useState([90000, 800000])
+  const [rangePrices, setRangePrices] = useState([200000, 2000000])
 
   return (
     <>
@@ -60,7 +60,7 @@ export const PriceRangeInputField: FC<Props> = ({
 
               <div className="flex-1 text-start">
                 <span className={clsx('block font-semibold', styles.mainText[fieldStyle])}>
-                  {`$${convertNumbThousand(rangePrices[0] / 1000)}k ~ $${convertNumbThousand(rangePrices[1] / 1000)}k`}
+                  {`R$ ${convertNumbThousand(rangePrices[0] / 1000)}k ~ R$ ${convertNumbThousand(rangePrices[1] / 1000)}k`}
                 </span>
                 <span className="mt-1 block text-sm leading-none font-light text-neutral-400">
                   {T['HeroSearchForm']['Choose price range']}

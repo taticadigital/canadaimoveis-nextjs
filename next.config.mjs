@@ -34,6 +34,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.canadaimoveis.com.br',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 }

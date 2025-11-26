@@ -18,7 +18,7 @@ export async function getNavigation(): Promise<TNavigationItem[]> {
     {
       id: '5',
       href: '/',
-      name: 'Menu',
+      name: 'Templates',
       type: 'mega-menu',
       children: [
         {
